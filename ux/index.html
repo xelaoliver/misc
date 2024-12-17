@@ -4,21 +4,34 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>xela - chat ui + ux</title>
-	<script src="script.js"></script>
 	<link rel="stylesheet" href="style.css">
 	<script src="https://kit.fontawesome.com/1d1c32590e.js" crossorigin="anonymous"></script>
+  <script src="https://kihtrak.com/cloud_variable/cloudify.min.js"></script>
 </head>
 <body>
 	<input type="text" id="text-input" value="" placeholder="Message the chat board" autocomplete="off">
 	<button onClick="send()"><i class="fa-solid fa-paper-plane"> &nbsp; </i>Send</button>
 
-	<div style="background-color: #f0f1f3; display: inline-block; width: calc(100% - 550px);">
+	<div style="background-color: #f0f1f3; display: inline-block; width: calc(100% - 580px);">
 		<i class="fa-solid fa-comment"></i>
 		&nbsp; xela chat
+    &nbsp; <i class="fa-solid fa-ranking-star"></i> &nbsp; Rank: <span id="rank"></span>
+    &nbsp; <i class="fa-solid fa-user"></i> &nbsp; Username: <span id="username">waffler</span>
+    &nbsp; <i class="fa-solid fa-clock"></i> &nbsp; Time: <span id="time"></span>
 	</div>
 	
 	<div style="background-color: #f0f1f3; float: right; width: 200px;" class="vert-exp">
-		News & Ranks
+    <i class="fa-brands fa-youtube"></i> &nbsp; YouTube Theatre
+
+    <br><br>
+
+    <iframe width="200" height="150"
+src="https://www.wikipedia.org">
+</iframe>
+    
+    <br><br>
+    
+		<i class="fa-solid fa-newspaper"></i> &nbsp; News & Ranks
 		<p style="color: #ffd43a">mayor</p>
 		<p style="color: #e499f6">respondant</p>
 		<p style="color: #74c0fc">council</p>
@@ -27,8 +40,8 @@
 	
 	<br><br>
 	
-	<div style="background-color: #f0f1f3;" class="hor-exp">
-		It's quiet for now...
-	</div>
+	<div style="background-color: #f0f1f3;" class="hor-exp" id="chat"></div>
+  
+  <script src="script.js"></script>
 </body>
 </html>
