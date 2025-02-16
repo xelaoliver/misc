@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kihtrak.com/cloud_variable/cloudify.min.js"></script> <!-- for the chatboard, please email me if you have a better solution. -->
+    <title>xela</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="text-align: center; padding: 8px;" id="main-title">/\ |_ [- ><   () |_ | \/ [- /?</div>
+
+    <div class="container">
+        <p style="font-size: 8px;"></p>
+        <table>
+            <tr>
+                <td width="30%">
+                    <div class="box">
+                        Bulletin Board:
+
+                        <br><br>
+
+                        <div id="bulletin-container" style="height: 300px; width: auto; overflow: auto;"></div>
+                    </div>
+                    <p style="font-size: 4px;"></p>
+                    <div class="box">
+                        Chatroom:<a href="https://xelaoliver.github.io/chat" style="float: right;" class="grey">[main page]</a>
+
+                        <br><br>
+
+                        <div id="chat-container" style="height: 300px; width: auto; overflow: auto; word-wrap: break-word; word-break: break-all;">
+                            alex's &nbsp;room&emsp;&emsp;\user<br>
+                            ┌─┐┬ ┬┌─┐┌┬┐&emsp;&emsp;\image<br>
+                            │ &nbsp;├─┤├─┤ │ &emsp;&emsp;\clear<br>
+                            └─┘┴ ┴┴ ┴ ┴ &emsp;&emsp;\info<br> 
+                        </div>
+
+                        <br>
+
+                        <input type="text" class="input" id="text-input" placeholder="Enter a message..." autocomplete="off" style="width: 60%;"><span style="font-size: 8px;"> </span><span id="temp" style="opacity: 1; transition: 2.5s opacity;" class="grey">Enter to send</span>
+                    </div>
+                    <p style="font-size: 4px;"></p>
+
+                    <!--
+                    <div class="box">
+                        Webrings and links:
+
+                        <br><br>
+
+                        <iframe src="https://john.citrons.xyz/embed?ref=xelaoliver.github.io" style="margin-left: auto; display: block; margin-right: auto; max-width: 732px; width: 100%; height: 75px; border: none;"></iframe>
+
+                        My 88x31 link:
+                        <br><br>
+
+                        <a href="https://xelaoliver.github.io"><img src="88x31.png"></a><br><textarea class="input" style="resize: none; width: calc(100% - 8px); height: 75px;"><a href="https://xelaoliver.github.io"><img src="https://xelaoliver.github.io/88x31.png"></a></textarea>
+
+                        <br><br>
+
+                        <a href="https://oat.zone" target="_blank" rel="noopener noreferrer"><img src="https://motan.gay/badges/oatzone.gif" alt="oat.zone"></a>
+                        
+
+                        <br><br>
+
+                        <div class="grey">(i'm not apart of transing the internet)</div>
+                    </div>
+                    -->
+                </td>
+                <td>
+                    <div class="box">
+
+                        <!-- god, html -->
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::<br>
+                        :+:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:+:&nbsp;&nbsp;&nbsp;&nbsp;Hi, i'm <span class="red">Alex Oliver</span> and I think in code.<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+:+<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+#+&nbsp;&nbsp;&nbsp;<span class="grey">CPU</span>: Intel(R) 12th Gen i5-12400 @ 2.50GHz  <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+#+&nbsp;&nbsp;&nbsp;<span class="grey">GPU</span>: Intel(R) UHD Graphics 730  <br>
+                        #+#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#+#&nbsp;&nbsp;&nbsp;&nbsp;<span class="grey">RAM</span>: 8GB    <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;###
+
+                        <br><br>
+
+                        I'm aiming to update this website every week with one new project, so bookmark this tab!
+
+                        <br><br>
+
+                        <div style="text-align: center;">
+                            <span class="grey">RETRO COMPUTING · PROGRAMMING · RANDOM GOOFY AHH</span>
+                        </div>
+                    </div>
+                    
+                    <table style="width: 100%; height: 550px;">
+                        <tr><td style="width: auto;"><div style="padding: 8px;">
+                            ./xelaoliver.github.io      <br>
+                            <span class="grey">├──</span> <a href="https://xelaoliver.github.io" class="red">home</a><br>
+                            <span class="grey">├──</span> <a href="https://xelaoliver.github.io/chat">chatroom                </a><br>
+                            <span class="grey">├──</span> <a href="https://xelaoliver.github.io/projects">projects                </a><br>
+                            <span class="grey">│&nbsp;&nbsp;&nbsp;├──</span> <a href="https://xelaoliver.github.io/projects/new">new             </a><br>
+                            <span class="grey">│&nbsp;&nbsp;&nbsp;├──</span> <a href="https://xelaoliver.github.io/projects/old">old             </a><br>
+                            <span class="grey">│&nbsp;&nbsp;&nbsp;└──</span> <a href="https://github.com/xelaoliver?tab=repositories">github repos    </a><br>
+                            <span class="grey">├──</span> <a href="https://xelaoliver.github.io/about">about                              </a><br>
+                            <span class="grey">│&nbsp;&nbsp;&nbsp;├──</span> <a href="https://github.com/xelaoliver">github          </a><br>
+                            <span class="grey">│&nbsp;&nbsp;&nbsp;├──</span> <a href="mailto:dev.alexoliver@gmail.com">email           </a><br>
+                            <span class="grey">│&nbsp;&nbsp;&nbsp;└──</span> <a href="https://buymeacoffee.com/alex.oliver">buymeacoffee    </a><br>
+                            <span class="grey">
+                                └─┐ ┬┌─┐┬  ┌─┐&nbsp;┌─┐┬  ┬┬&nbsp;&nbsp;┬┌─┐┬─┐<br>
+                                ┌─┼─┘├┤ │  ├─┤&nbsp;│-││  │└┐┌┘├┤ ├┬┘<br>
+                                ┴ └─┘└─┘┴┘┴ ┴&nbsp;└─┘┴┘┴ └┘ └─┘┴└── ─·<br>
+                            </span>
+                        </div></td>
+
+                        <td style="position: relative; width: 336px;">
+                            <a href="https://xelaoliver.github.io/projects/old" style="border-radius: 4px; width: 336px; height: 351px; background-color: #ff4c4c; position: absolute; top: 10px; transform: rotate(-2.5deg)">
+                                <div style="margin-left: 30px; width: 276px; height: 207px; background-color: inherit; filter: brightness(90%); border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; text-align: center; line-height: 75px;">RECENT/NEW PROJECTS · LINK</div>
+                                <div style="background-color: #666; margin-left: 75px; margin-top: 30px; width: 231px; height: 114px; border-top-left-radius: 4px; border-top-right-radius: 4px;"></div>
+                            </a>
+                            <a href="https://xelaoliver.github.io/projects/new" style="border-radius: 4px; width: 336px; height: 351px; background-color: #4c4cff; position: absolute; top: 95px; transform: rotate(2.5deg)">
+                                <div style="margin-left: 30px; width: 276px; height: 207px; background-color: inherit; filter: brightness(90%); border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; text-align: center; line-height: 75px;">PREVIOUS/OLD PROJECTS · LINK</div>
+                                <div style="background-color: #666; margin-left: 75px; margin-top: 30px; width: 231px; height: 114px; border-top-left-radius: 4px; border-top-right-radius: 4px;"></div>
+                            </a>
+                            <a href="https://xelaoliver.github.io/projects/github" style="border-radius: 4px; width: 336px; height: 351px; background-color: #ffa64c; position: absolute; top: 190px; transform: rotate(-2.5deg)">
+                                <div style="margin-left: 30px; width: 276px; height: 207px; background-color: inherit; filter: brightness(90%); border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; text-align: center; line-height: 75px;">GITHUB PROJECTS · LINK</div>
+                                <div style="background-color: #666; margin-left: 75px; margin-top: 30px; width: 231px; height: 114px; border-top-left-radius: 4px; border-top-right-radius: 4px;"></div>
+                            </a>
+                        </td></tr>
+                    </table>
+
+                    <!--
+                    <p style="font-size: 4px;"></p>
+                    <div style="text-align: center;" id="new-projects">New Projects:</div>
+                    <table width="100%" id="new-contents"></table>
+
+                    <p style="font-size: 4px;"></p>
+                    <div style="text-align: center;" id="github-projects">Github Projects:</div>
+                    <table width="100%" id="github-contents"></table>
+
+                    <p style="font-size: 4px;"></p>
+                    <div style="text-align: center;" id="old-projects">Old Projects:</div>
+                    <table width="100%" id="old-contents"></table>
+                    -->
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="footer">Alex Oliver &copy; <span id="year"></span><script>document.getElementById("year").innerHTML = new Date().getFullYear();</script></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
