@@ -1,0 +1,36 @@
+body {
+    font-family: "Courier New", Courier, monospace;
+}
+
+table {
+    width: 50%;
+    margin: 0px auto;
+}
+
+td {
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.small {
+    color: #c2c4c7;
+}
+
+.box {
+    border: 1px solid #c2c4c7;
+    padding: 4px;
+    margin-top: 4px;
+}
+
+.rss-feed {
+    height: 400px;
+    overflow-y: scroll;
+}
