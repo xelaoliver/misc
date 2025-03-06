@@ -1,0 +1,224 @@
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <title>xela</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .box {
+            border: 1px solid #c2c4c7;
+            padding: 4px;
+            margin-top: 4px;
+            border-radius: 8px;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        table {
+            width: 50%; 
+        }
+
+        .small {
+            color: #c2c4c7;
+        }
+
+        td {
+            vertical-align: top;
+        }
+
+        ul {
+            list-style-position: inside;
+            margin-left: 4px;
+        }
+
+        @media screen and (max-width: 980px) {
+            table {
+                width: 95%;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            tr {
+                display: block;
+                width: 94vw;
+            }
+
+            td {
+                display: block;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table style="margin-left: auto; margin-right: auto;">
+        <tr>
+            <td>
+                <div class="box">Projects:<p><ul>
+                    <li><a href="https://xelaoliver.github.io/chat">Chat board</a></li>
+                    <li><a href="https://xelaoliver.github.io/brainfuck">Brainfuck interpreter</a></li>
+                    <li><a href="https://xelaoliver.github.io/nipkow-disk">Nipkow disk simulator</a></li>
+                    <li><a href="https://xelaoliver.github.io/morse-code">Morse code</a></li>
+                    <li><a href="https://github.com/xelaoliver/3d2" target="_blank">Javascript 3D trinity</a></li>
+                    <li><a href="https://github.com/xelaoliver/3d2/blob/main/monopoly.js" target="_blank">Monopoly in 3D</a><span class="small"> <- unfinished</span></li>
+                </ul></p></div>
+
+                <div class="box">RSS Feed:<p>
+                    <div style="height: 400px; overflow-y: scroll;">
+                        <script src="https://rss.bloople.net/?url=http%3A%2F%2Fnewsrss.bbc.co.uk%2Frss%2Fnewsonline_uk_edition%2Ffront_page%2Frss.xml&showtitle=false&type=js"></script>
+                    </div>
+                </p></div>
+
+                <div class="box">
+                    Chatroom:<a href="https://xelaoliver.github.io/chat" style="float: right;" class="small">Main page</a><p>
+                    <div id="chat-container" style="height: 300px; width: auto; overflow: auto; word-wrap: break-word; word-break: break-all;">
+                        /user <span class="small">username</span><br>
+                        /clear <span class="small">clears the chatroom</span><br>
+                        /image <span class="small">image/gif url</span><br>
+                    </div></p>
+
+                    <input type="text" class="box" id="text-input" placeholder="Enter a message..." autocomplete="off" style="width: calc(100% - 10px);">
+
+                    <script src="https://kihtrak.com/cloud_variable/cloudify.min.js"></script>
+                    <script src="script.js"></script>
+                </div>
+            </td>
+
+            <td width="25%">
+                <div class="box">Links:<p><ul>
+                    <li><a href="https://xelaoliver.github.io/rss">RSS Feed</a></li>
+                    <li><a href="https://github.com/xelaoliver?tab=repositories">Github repos</a></li>
+                    <li><a href="https://discord.gg/utfH4g43BG">Discord</a></li>
+                    <li><a href="https://buymeacoffee.com/alex.oliver">Donate</a><span class="small"> <- Please!</span></li>
+                    <li><a href="mailto:dev.alexoliver@gmail.com">Email</a></li>
+                    <li><a href="https://xelaoliver.github.io/chat">Chatroom</a></li>
+                    <li><a href="https://xelaoliver.github.io/about">About</a></li>
+                </ul></p></div>
+                <div class="box">
+                    My hardware:<p>
+                        CPU: Intel(R) 12th Gen i5-12400 @ 2.50GHz<br>GPU: Intel(R) UHD Graphics 730<br>RAM: 8GB
+                    </p>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>don't be afraid john</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                color: #1e1d1d;
+            }
+
+            .box {
+                background-color: #fff5e1;
+                border: 1px #1e1d1d solid;
+                border-radius: 4px;
+                box-shadow: 4px 4px;
+                padding: 8px;
+                margin-bottom: 16px;
+            }
+
+            .title {
+                font-size: larger;
+                font-family: Georgia;
+                font-weight: 600;
+                color: #e76f51;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box" style="width: 400px;">
+            <div class="title">Faith the unholy trinity.</div><br>
+            Faith is a survival horror video game developed by Airdorf Games for Windows. The game consists of three chapters; the first two were self-published by Airdorf Games in October 2017 and February 2019 respectively, while the third was published by New Blood Interactive in October 2022 as part of Faith: The Unholy Trinity (stylized as FAI†H: The Unholy Trinity), a compilation of all three chapters with additional features. The game uses retro graphics similar to the graphics of an Apple II or Atari 2600.
+
+            <p>
+                The game received positive reviews, with critics praising the game for its unique visual style, atmospheric storytelling, and the ability to evoke the nostalgic feel of classic horror games.
+            </p>
+        </div>
+
+        <div class="box" style="width: 800px;" id="projects"><div class="title">Projects:</div><br>Projects are stored in a javascript variable so I don't have to keep updating the <i>index.html</i> page and creating new pages for projects.</div>
+        <script>
+            var projects = [
+                {
+                    "name": "Javascript chat board",
+                    "date": "Jun 10, 2024 / Nov 13, 2024",
+                    "url": "https://xelaoliver.github.io/chat",
+                },
+                {
+                    "name": "Brainfuck interpreter",
+                    "date": "Nov 6, 2024",
+                    "url": "https://xelaoliver.github.io/brainfuck",
+                },
+                {
+                    "name": "Nipkow disk simulator",
+                    "date": "Dec 19, 2024",
+                    "url": "https://xelaoliver.github.io/nipkow-disk",
+                },
+                {
+                    "name": "Javascript 3D Renderer",
+                    "date": "Aug 26, 2024 - idk when i'll end",
+                    "url": "https://github.com/xelaoliver/3d2",
+                },
+                {
+                    "name": "Morse code decoder",
+                    "date": "Jan 8, 2025",
+                    "url": "https:/xelaoliver.github.io/morse-code",
+                },
+                {
+                    "name": "Minecraft & Mojang rant",
+                    "date": "Jan 13, 2025",
+                    "url": "https://xelaoliver.github.io/minecraft-rant.pdf",
+                }
+            ]
+
+            var projectContainer = document.getElementById("projects");
+
+            projectContainer.innerHTML += "<ul>";
+
+            for (let i = 0; i < projects.length; i ++) {
+                let project = projects[i];
+                projectContainer.innerHTML += `<li><a href="${project.url}">${project.name} - ${project.date}</a></li>`;
+            }
+
+            projectContainer.innerHTML += "</ul>";
+        </script>
+    </body>
+</html>
