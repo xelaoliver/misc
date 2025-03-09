@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Ward</title>
+    <style>
+        @font-face {
+            font-family: "zeldadxt";
+            src: URL("C:/Users/emmet/Desktop/Programming/Javascript/zeldadxt.ttf") format("truetype");
+        }
+        
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: "zeldadxt";
+            margin: 0px;
+            height: 100%;
+            line-height: 1.6;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        img {
+            image-rendering: pixelated;
+        }
+
+        .container {
+            border-top-width: 0px;
+            border-bottom-width: 0px;
+            border-style: solid;
+            border-color: #ff0000;
+            width: 60%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            min-height: 100vh;
+        }
+
+        .holy-container {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .cross {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="holy-container">
+            <table style="width: 100%;">
+                <tr>
+                    <td><img class="cross" src="https://images.steamusercontent.com/ugc/1931510124444689459/733B2FBF4E8C4884B1C37021026D0432DA04EA2D/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"></td>
+                    <td><img src="https://media1.tenor.com/m/xZBxD7BJUoIAAAAd/john-ward-faith.gif" style="width: 300px; height: auto;"></td>
+                    <td><img class="cross" src="https://images.steamusercontent.com/ugc/1931510124444689459/733B2FBF4E8C4884B1C37021026D0432DA04EA2D/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"></td>
+                </tr>
+            </table>
+
+            <p>It's been <span id="years"></span> years since I first went inside that house. I have to finish what I started...</p> <p>What I am about to do has not been aproved by the Vatican.</p>
+
+            <table style="width: 250px; margin-left: auto; margin-right: auto;">
+                <tr>
+                    <td style="width: 33.33%;">AMY</td>
+                    <td style="width: 33.33%;"><img class="cross" src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/1179080/75a3315502910db065322146e3beba775f733362.jpg"></td>
+                    <td style="width: 33.33%;">MARTIN</td>
+                </tr>
+            </table>
+
+            <p>I have experienced supernatural fright and unskpeakable evil in the process of attempting to perfom an exorcism on Amy Martin which resulted in her jumping out of the 2nd floor's window. Resulting in the option of shooting her with a gun with one bullet, but I cannt recall if I had - the demonds got to me. Throughout my wonders to the house and back, I experienced frights from an unknown spider devil but I warded it off with my cross.</p>
+
+            <table style="width: 250px; margin-left: auto; margin-right: auto;">
+                <tr>
+                    <td style="width: 33.33%;">CULTISTS</td>
+                    <td style="width: 33.33%;"><img class="cross" src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/1179080/75a3315502910db065322146e3beba775f733362.jpg"></td>
+                    <td style="width: 33.33%;">& THE NOTES</td>
+                </tr>
+            </table>
+
+            <p>Throughout the exploration of the house I exortist multiple spirits out of objects, that could have been influencing Amy Martin, which revealed notes from mail and photographs to birthday cards. These were vital sources of information that could have additionally influenced the way Amy Martin was acting.</p>
+
+            <p>During the drive back I was haulted by red-robed people and behind them, a blaze of fire. Before anything could happen, my vision and sences faded. An annonymous bystander captured this photograph:</p>
+
+            <img src="https://static.wikia.nocookie.net/airdorf/images/c/cf/Offering_ending.png/revision/latest?cb=20230316152324" style="width: 500px;">
+
+            <p>JOHN WARD</p> 
+
+            <script>
+                document.getElementById("years").innerHTML = new Date().getFullYear()-1986;
+            </script>
+        </div>
+    </div>
+</body>
+</html>
