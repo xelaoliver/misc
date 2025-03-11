@@ -1,4 +1,5 @@
 # paste the vocab for the quizlet set into 'general.txt', place your mouse where there is a space on the 'Start game' button and run the program (ctrl+alt+n if using vscode). this program works best with a 1920x1080 display, but you can alter the distances between boxes and the starting position if needed.
+# general.txt contains the vocab from here: https://quizlet.com/gb/878076552/dynamo-3-module-3-test-1-flash-cards/
 
 import pyperclip
 import pyautogui
