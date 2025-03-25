@@ -37,7 +37,7 @@ int index(string array[], string element, int size) {
 
 int main() {
     ifstream file;
-    file.open("C:/Users/emmet/Desktop/Programming/Python/general.txt");
+    file.open("C:/Users/GITHUB/quizlet-match-solver/general.txt");
     string dict[MAX_LINES];
 
     int i = 0;
