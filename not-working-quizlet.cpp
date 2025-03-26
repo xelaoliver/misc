@@ -1,12 +1,29 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include <Windows.h>
-
-#define MAX_LINES 110
-#define POSITIONS [[0, 0], [1, 0], [2, 0], [3, 0], [0, 1], [1, 1], [2, 1], [3, 1], [0, 2], [1, 2], [2, 2], [3, 2]]
+#include <vector>
+#include <string>
+#include <windows.h>
+#include <algorithm>
 
 using namespace std;
+
+std::string trim(const std::string& str) {
+    size_t start = str.find_first_not_of(" \t\r\n");
+    size_t end = str.find_last_not_of(" \t\r\n");
+    return (start == std::string::npos || end == std::string::npos)?"" : str.substr(start, end-start+1);
+}
+
+int indexOf(const std::vector<string>& array, const string& item) {
+    string trimmedItem = trim(item);
+    for (size_t i = 0; i < array.size(); i ++) {
+        if (trim(array[i]) == trimmedItem) {
+            return i;
+        }
+    }
+    return -1;
+}
+
 
 void simulateStart() {
     // left click
@@ -25,63 +42,130 @@ void simulateStart() {
     keybd_event(VK_CONTROL, 0, KEYEVENTF_KEYUP, 0);
 }
 
-int index(string array[], string element, int size) {
-    for (int m = 0; m < size; m ++) {
-        if (array[m] == element) {
-            return m;
-        }
-    }
-    return -1;
-}
-
-
 int main() {
+    // open dictionary file
     ifstream file;
-    file.open("C:/Users/GITHUB/quizlet-match-solver/general.txt");
-    string dict[MAX_LINES];
+    file.open("C:/Users/emmet/Desktop/Programming/Python/general.txt");
+    std::vector<string> reference;
+    std::string line;
+    std::vector<std::pair<int, int>> instructions;
 
-    int i = 0;
-    while (!file.eof()) {
-        getline(file, dict[i]);
-        i ++;
-
-        if (i == MAX_LINES) {
-            break;
+    while (getline(file, line)) {
+        line = trim(line);
+        if (!line.empty()) {
+            reference.push_back(line);
         }
     }
 
-    file.close();
-
-    /* debugging dictionary
-    for (int i = 0; i < MAX_LINES; i ++) {
-        cout << dict[i] << endl;
-    }
-    */
-
+    // get game information
     simulateStart();
 
     HANDLE clip;
+    std::vector<string> game;
     if (OpenClipboard(NULL)) {
         clip = GetClipboardData(CF_TEXT);
+        if (clip != NULL) {
+            char* clipText = static_cast<char*>(GlobalLock(clip));
+            if (clipText != NULL) {
+                istringstream ssin(clipText);
+                string item;
+                while (getline(ssin, item, '\n')) {
+                    game.push_back(trim(item));
+                }
+                GlobalUnlock(clip);
+            }
+        }
+        CloseClipboard();
     }
+
+    // generate instructions
+    int j;
+    for (int i = 7; i < game.size(); i ++) {
+        j = indexOf(reference, game[i]);
+
+        /*
+        if (j%2 == 0) {
+            j = j-1;
+        } else {
+            j = j+1;
+        }
     
-    string game[MAX_LINES];
-    istringstream ssin((char*) clip);
+        bool append = true;
+        for (int l = 0; l < instructions.size(); l ++) {
+            int section[2] = {indexOf(game, reference[indexOf(reference, game[i])]), indexOf(game, reference[j])};
+            if (instructions[l].first == indexOf(game, reference[indexOf(reference, game[i])]) && instructions[l].second == indexOf(game, reference[j]) || instructions[l].first == indexOf(game, reference[j]) && instructions[l].second == indexOf(game, reference[indexOf(reference, game[i])])) {
+                append = false;
+                break;
+            }
+        }
 
-    i = 0;
-    while (i < MAX_LINES && getline(ssin, game[i])) {
-        i++;
+        if (append) {
+            instructions.push_back({indexOf(game, reference[indexOf(reference, game[i])]), indexOf(game, reference[j])});
+        }
+        */
+
+        cout << i << ": " << reference[indexOf(reference, game[i])] << " and " << indexOf(game, reference[j+1]) << endl;
     }
 
-    /* debugging the game capture
-    for (i = 7; i < 19; i ++) {
-        cout << game[i] << endl;
+    for (int i = 0; i < instructions.size(); i ++) {
+        cout << i << ": " << reference[instructions[i].first] << " and " << reference[instructions[i].second] << endl;
     }
-    */
+}
 
-    i = 7;
-    cout << game[i] << endl;
-    cout << index(dict, game[i], MAX_LINES) << endl;
+/* find in array function example
+int main() {
+    string names[4] = {"John", "Edward", "Paul", "Chad"};
+    string myName = "Paul";
+
+    cout << "My mame: " << myName << endl << "Index: " << indexOf(names, myName, sizeof(names)/sizeof(names[0])) << endl;
+}
+*/
+
+/* open file and find the index of le poisson example
+int main() {
+    ifstream file;
+    file.open("C:/Users/emmet/Desktop/Programming/Python/general.txt");
+    std::vector<string> reference;
+    std::string line;
+
+    while (getline(file, line)) {
+        if (line != "") {
+            reference.push_back(line);
+        }
+    }
+
+    for (size_t i = 0; i < reference.size(); i ++) {
+        cout << i << ":" << reference[i] << endl;
+    }
+
+    cout << "item: le poisson\nindex: " << indexOf(reference, "le poisson") << endl;
 
     return 0;
 }
+*/
+
+/* get clipboard example
+int main() {
+    HANDLE clip;
+    std::vector<string> game;
+    if (OpenClipboard(NULL)) {
+        clip = GetClipboardData(CF_TEXT);
+        if (clip != NULL) {
+            char* clipText = static_cast<char*>(GlobalLock(clip));
+            if (clipText != NULL) {
+                istringstream ssin(clipText);
+                string item;
+                while (getline(ssin, item, '\n')) {
+                    game.push_back(item);
+                }
+                GlobalUnlock(clip);
+            }
+        }
+        CloseClipboard();
+    }
+
+    for (const auto& item : game) {
+        cout << item << endl;
+    }
+}
+*/
