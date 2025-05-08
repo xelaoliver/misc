@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <style>
+        .main {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .container, .img {
+            position: relative;
+        }
+
+        .video {
+            position: absolute;
+            left: 105px;
+            top: 68px;
+            width: 68px;
+            height: 68px;
+            z-index: -1;
+        }
+
+        #url {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <div class="main">
+            <div class="container">
+                <button id="play-button">play video</button> <input type="text" id="url" placeholder="https://youtube.video.url" style="width: 414px;">
+                <p>
+                    <!-- osama.png is a photograph of osama bin ladin watching himself on the tv -->
+                    <img src="osama.png" style="width: 500px;" class="img">
+                    <iframe class="video" id="video" src="" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </p>
+            </div>
+        </div>
+        <script>
+            document.getElementById("play-button").addEventListener("click", function () {
+                const videoIframe = document.getElementById("video");
+
+                function YouTubeGetID(url) {
+                    var ID = '';
+                    url = url.replace(/(>|<)/gi, '').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
+
+                    if (url[2] !== undefined) {
+                        ID = url[2].split(/[^0-9a-z_\-]/i);
+                        ID = ID[0];
+                    } else {
+                        ID = url;
+                    }
+                    return ID;
+                }
+
+                const videoURL = document.getElementById("url").value; // Use .value instead of .innerHTML
+                console.log(YouTubeGetID(videoURL));
+
+                videoIframe.src = `https://www.youtube.com/embed/${YouTubeGetID(videoURL)}?autoplay=1&mute=1&modestbranding=1&controls=0`;
+            });
+        </script>
+    </body>
+</body>
+</html>
