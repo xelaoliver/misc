@@ -1,6 +1,6 @@
 # Miscellaneous
 
-Programs that don't need their own repository or are useful. This is just an archive of projects that make me feel better.
+Programs that don't need their own repository or aren't useful. This is just an archive of projects that make me feel better.
 
 # License
 
