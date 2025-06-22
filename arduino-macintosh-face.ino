@@ -1,3 +1,6 @@
+// Alex Oliver 2024
+// A simple program for Arduino's lineup of microcontrollers that displays Macintosh's face from 1984.
+
 #include <LiquidCrystal.h>
 
 const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
