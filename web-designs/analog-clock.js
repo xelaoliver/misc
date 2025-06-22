@@ -1,4 +1,4 @@
-// html: analog clock:<br><canvas width="250" height="250" id="canvas"></canvas>
+// html: <br><canvas width="250" height="250" id="canvas"></canvas>
 
 const ctx = document.getElementById("canvas").getContext("2d");
 const strokeRadius = 2.5;
