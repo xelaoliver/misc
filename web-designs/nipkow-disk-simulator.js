@@ -1,3 +1,6 @@
+// Alex Oliver 2024
+// A simple program that allows for a simulation of Nipkow disks. Please refer to https://xelaoliver.github.io/nipkow-disk/ for more information.
+
 const ctx = document.getElementById('canvas').getContext('2d');
 canvas.width = window.innerWidth; canvas.height = window.innerHeight;
 
