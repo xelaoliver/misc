@@ -1,3 +1,4 @@
+// idk why i have this
 // <script src="https://cdn.jsdelivr.net/npm/peerjs@1.3.2/dist/peerjs.min.js"></script>
 
 const peerId = Math.floor(Math.random()*(899-100)+100);
