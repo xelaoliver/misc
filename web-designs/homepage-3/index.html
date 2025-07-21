@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>yes</title>
+        <style>
+            .main {
+                width: 70vw;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                font-family: monospace;
+                font-size: larger;
+            }
+
+            .box {
+                border-width: 1px;
+                border-color: grey;
+                border-radius: 3px;
+                border-style: solid;
+                padding: 3px;
+                padding-bottom: 4px;
+
+            }
+
+            a {
+                color: #ff4c4c;
+            }
+
+            .box-link:hover {
+                cursor: pointer;
+            }
+
+            .box-link {
+                width: calc(70vw / 3);
+                height: 75px;
+                border-width: 1px;
+                border-color: grey;
+                border-radius: 3px;
+                border-style: solid;
+                padding: 3px;
+                padding-bottom: 4px;
+            }
+
+            .image-text {
+                position: relative;
+                color: white;
+                float: left;
+                margin-right: 6px;
+            }
+
+            .image-image-text {
+                width: 360px;
+                height: 360px;
+                object-fit: none;
+                object-position: 60% 30%;
+                border-radius: 3px;
+            }
+
+            @media screen and (max-width: 480px) {
+                .main {
+                    width: 95vw;
+                }
+
+                .image-image-text {
+                    width: 96vw;
+                    padding-bottom: 15px;
+                }
+
+                .box-link {
+                    width: calc(87vw / 3);
+                    height: calc(87vw / 3);
+                }
+
+                .box {
+                    width: 94vw;
+                }
+
+                .image-text {
+                    margin-right: 1000px;
+                }
+            }
+        </style>
+        <script src="//instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+    </head>
+    <body>
+        <div class="main">
+            <div class="box">
+                Alex Oliver (Est. 2011)
+                <a href="https://xelaoliver.github.io/about"><span style="float: right; padding-right: 3px;">About</span></a>
+            </div>
+
+            <div>
+                <br><div class="image-text">
+                    <img src="icon.JPG" class="image-image-text" loading="lazy" alt="Computers">
+                    <div style="position: absolute; bottom: 6px; left: 6px; font-size: small;">National Museum of Computing (Aug 2024)</div>
+                </div>
+
+                I like to make things on computers and with electonics. I don't like to do ordinary activities because it's not unique, breaking free from a monophonic society and documenting some creative and different projects on this website.
+
+                <p>How I got into computing:</p>
+                
+                <p>Before programming, I enjoyed creating mechanical machines using Lego Technic. My most notable inventions were the Mechanical Useless Box and several Pneumatic powered engines powered by (not so) compressed air. Later, I developed an intrest for creating projects using Scratch and experimenting with it's limitations. Keep in mind I was less than 10 years old when I was doing this. When I realised how marvelous coding was, I advanced to Python and Javascript where I developed my first major projects. During this, I developed a liking for retro/8-bit computers, which is why I included a photograph of the National Museum of Computing in Bletchley Park (Aug 2024), a planed journey back is required in 2025/6.</p>
+
+                <p>Main PC Specs:</p>
+
+                <p>CPU: Intel I5-12400<br>GPU: Intel UHD Graphics 730 (128MB vram)<br>RAM: 8.00GB<br>OS: Windows 11 (I use Linux on all of my older computers)</p>
+            </div>
+
+            <br>Projects:
+
+            <table>
+                <tr>
+                    <td><div class="box-link" onclick="location.href='https://xelaoliver.github.io/chat';">
+                        <div style="color: #ff4c4c;">Chat system</div>
+                        Talk to others on the internet.<br>
+                        Nov 2024
+                    </div></td>
+                    <td><div class="box-link" onclick="window.open('https://github.com/xelaoliver/software-renderer-javascript', '_blank');">
+                        <div style="color: #ff4c4c;">Software Renderer</div>
+                        Render .obj files in the browser.<br>
+                        Aug 2024
+                    </div></td>
+                    <td><div class="box-link" onclick="window.open('https://github.com/xelaoliver/quizlet-match-solver', '_blank');">
+                        <div style="color: #ff4c4c;">Quizlet Match Solver</div>
+                        Solve quizlet matches easily.<br>
+                        Jun 2025
+                    </div></td>
+                </tr>
+                <tr>
+                    <td><div class="box-link" onclick="window.open('https://github.com/xelaoliver/monopoly', '_blank');">
+                        <div style="color: #ff4c4c;">Multiplayer Monopoly</div>
+                        Failed port of Monopoly, must revisit.<br>
+                        Nov 2025
+                    </div></td>
+                    <td><div class="box-link" onclick="window.open('https://github.com/xelaoliver/miscellaneous', '_blank');">
+                        <div style="color: #ff4c4c;">Miscellaneous Projects</div>
+                        Small programs which are fun.<br>
+                        2025-now
+                    </div></td>
+                    <td><div class="box-link" onclick="location.href='https://xelaoliver.github.io/morse-code/';">
+                        <div style="color: #ff4c4c;">Morse Code Decoder</div>
+                        Type in morse code, learn morse code.<br>
+                        Jan 2025
+                    </div></td>
+                </tr>
+                <tr>
+                    <td><div class="box-link" onclick="location.href='https://xelaoliver.github.io/nipkow-disk/';">
+                        <div style="color: #ff4c4c;">Nipkow Disk Simulator</div>
+                        Create your own Mechanical TV.<br>
+                        Dev 2024
+                    </div></td>
+                    <td><div class="box-link" onclick="location.href='https://xelaoliver.github.io/brainfuck/';">
+                        <div style="color: #ff4c4c;">Brainfuck Interpreter</div>
+                        Create your own Brainfuck programs.<br>
+                        Dec 2024
+                    </div></td>
+                </tr>
+           </table>
+        </div>
+    </body>
+</html>
